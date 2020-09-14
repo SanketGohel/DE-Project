@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: 'postgres'
+    environment:
+      - POSTGRES_DB=sparkify
+      - POSTGRES_USER=sg1395
+      - POSTGRES_PASSWORD=Leopard1192
+    ports:
+      - 5432:5432
+    networks:
+      - pypostgres
+  
+      
+networks:
+  pypostgres:
+    driver: bridge
